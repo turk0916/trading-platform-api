@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: trading-platform-api
+    env: node
+    buildCommand: npm install
+    startCommand: node backend/server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://ggrandpasha:7EhA4IpPAAZsb5KR@cluster0.akzi0.mongodb.net/trading-platform?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: trading-platform-secret-key-2024
+      - key: PORT
+        value: 10000
